@@ -15,7 +15,7 @@ export const portfolioData: PortfolioData = {
     title: "First-Year B.Tech Student",
     status: "Exploring Code, Design & Curiosity",
     // Replace with your own image in /public/avatar.jpg or any URL
-    avatarUrl: "/avatar.jpg",
+    avatarUrl: "./avatar.jpg",
     tagline: "Curious mind. Creative ideas. Building things that matter.",
     customTagline: "Designing immersive digital experiences with code & imagination",
     shortBio: "Hi, I'm Tulika. I'm a first-year B.Tech student exploring the intersection of technology, creativity, and problem-solving. I enjoy learning new things, experimenting with ideas, and turning curiosity into projects. I'm at the beginning of my journey, and I'm excited to discover what I can build.",
