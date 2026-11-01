@@ -9,45 +9,72 @@
   }
 
   body {
-    background-color: #06020c;
-    color: #ede9fe;
+    background-color: #223246;
+    color: #F4E9D8;
     font-family: 'Plus Jakarta Sans', sans-serif;
     overflow-x: hidden;
   }
 
-  /* Custom subtle scrollbar */
+  /* Custom scientific lab scrollbar */
   ::-webkit-scrollbar {
-    width: 8px;
+    width: 6px;
   }
 
   ::-webkit-scrollbar-track {
-    background: #090314;
+    background: #162130;
   }
 
   ::-webkit-scrollbar-thumb {
-    background: #3b1464;
-    border-radius: 9999px;
-    border: 2px solid #090314;
+    background: #704A3A;
+    border-radius: 4px;
+    border: 1px solid #162130;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background: #7c3aed;
+    background: #97D8C4;
   }
 }
 
-/* Custom glow utility helpers */
-.text-glow {
-  text-shadow: 0 0 20px rgba(168, 85, 247, 0.4);
+/* Dr. Stone Petrification Crack Overlay */
+.petrification-bg {
+  background-color: #223246;
+  background-image: 
+    radial-gradient(ellipse at 50% 0%, rgba(82, 153, 147, 0.12) 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 80%, rgba(158, 107, 85, 0.08) 0%, transparent 50%),
+    linear-gradient(180deg, #162130 0%, #223246 30%, #162130 100%);
 }
 
-.box-glow {
-  box-shadow: 0 0 35px -5px rgba(168, 85, 247, 0.3);
+/* Hairline borders with subtle glow */
+.lab-card {
+  background: rgba(22, 33, 48, 0.85);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(112, 74, 58, 0.45);
+  transition: all 0.25s ease-in-out;
 }
 
-/* Smooth glass surface */
-.glass-panel {
-  background: rgba(14, 6, 26, 0.65);
-  backdrop-filter: blur(16px);
-  border: 1px solid rgba(216, 180, 254, 0.15);
+.lab-card:hover {
+  border-color: rgba(151, 216, 196, 0.75);
+  box-shadow: 0 0 20px rgba(151, 216, 196, 0.18);
 }
 
+.lab-card-active {
+  border-color: #97D8C4;
+  box-shadow: 0 0 20px rgba(151, 216, 196, 0.25);
+}
+
+/* Glow helpers */
+.mint-glow-text {
+  text-shadow: 0 0 15px rgba(151, 216, 196, 0.6);
+}
+
+.terra-glow-text {
+  text-shadow: 0 0 15px rgba(231, 111, 81, 0.6);
+}
+
+/* Scanline / Grid overlay */
+.scanline-grid {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(151, 216, 196, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(151, 216, 196, 0.03) 1px, transparent 1px);
+}

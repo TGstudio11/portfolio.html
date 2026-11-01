@@ -1,5 +1,5 @@
 import React from 'react';
-import { Headphones, Sparkles, Lightbulb, Target, BookOpen, Heart } from 'lucide-react';
+import { Headphones, Sparkles, Lightbulb, Target, BookOpen, Heart, Atom } from 'lucide-react';
 import { portfolioData } from '../data/portfolioData';
 
 export const BeyondSection: React.FC = () => {
@@ -8,36 +8,36 @@ export const BeyondSection: React.FC = () => {
   const getInterestIcon = (icon: string) => {
     switch (icon) {
       case 'Headphones':
-        return <Headphones className="w-5 h-5 text-neon-violet" />;
+        return <Headphones className="w-5 h-5 text-kos-mint" />;
       case 'Sparkles':
-        return <Sparkles className="w-5 h-5 text-lavender" />;
+        return <Sparkles className="w-5 h-5 text-kos-mint" />;
       case 'Lightbulb':
-        return <Lightbulb className="w-5 h-5 text-amber-400" />;
+        return <Lightbulb className="w-5 h-5 text-kos-terra" />;
       case 'Target':
-        return <Target className="w-5 h-5 text-emerald-400" />;
+        return <Target className="w-5 h-5 text-kos-mint" />;
       case 'BookOpen':
-        return <BookOpen className="w-5 h-5 text-cyan-400" />;
+        return <BookOpen className="w-5 h-5 text-kos-linen" />;
       default:
-        return <Heart className="w-5 h-5 text-pink-400" />;
+        return <Heart className="w-5 h-5 text-kos-terra" />;
     }
   };
 
   return (
     <section id="beyond" className="relative py-24 sm:py-32 px-4 sm:px-6 max-w-6xl mx-auto">
-      {/* Background ambient texture */}
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-96 h-96 bg-dream-700/10 rounded-full blur-[140px] pointer-events-none -z-10" />
+      {/* Background ambient lighting */}
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-96 h-96 bg-kos-mint/5 rounded-full blur-[140px] pointer-events-none -z-10" />
 
       {/* Section Eyebrow Header */}
       <div className="space-y-2 mb-12 sm:mb-16 text-center max-w-2xl mx-auto">
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-dream-900/80 border border-lavender/20 text-xs font-mono text-lavender tracking-wider uppercase">
-          <Heart className="w-3.5 h-3.5 text-pink-400" />
-          <span>Chapter 05 // Unplugged</span>
+        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-kos-navy-dark border border-kos-mint/30 text-xs font-mono text-kos-mint tracking-wider uppercase">
+          <Atom className="w-3.5 h-3.5 text-kos-mint" />
+          <span>Chapter 005 // Human Side of Science</span>
         </div>
-        <h2 className="font-heading text-3xl sm:text-5xl font-bold tracking-tight text-white">
-          A little more <span className="bg-gradient-to-r from-lavender via-dream-300 to-neon-purple bg-clip-text text-transparent">about me.</span>
+        <h2 className="font-heading text-3xl sm:text-5xl font-bold tracking-tight text-kos-parchment">
+          Beyond the code, <span className="text-kos-mint mint-glow-text">the human mind.</span>
         </h2>
-        <p className="text-lavender-muted text-sm sm:text-base">
-          The human behind the terminal: music that feeds focus, aesthetic obsessions, creative role models, and sci-fi daydreams.
+        <p className="text-kos-linen-muted text-sm sm:text-base font-mono">
+          Late-night training loops, sci-fi philosophy, sustainable tech daydreams, and the relentless drive to build things that matter.
         </p>
       </div>
 
@@ -46,35 +46,35 @@ export const BeyondSection: React.FC = () => {
         {beyondScreen.map((item, index) => (
           <div
             key={index}
-            className={`group relative rounded-3xl p-6 sm:p-7 bg-gradient-to-b from-dream-900/60 to-dream-950/70 border border-lavender/15 hover:border-lavender/40 backdrop-blur-xl transition-all duration-300 hover:shadow-glow-md hover:-translate-y-1.5 flex flex-col justify-between ${
+            className={`lab-card rounded-2xl p-6 sm:p-7 bg-kos-navy-dark/80 border border-kos-clay-dark/60 hover:border-kos-mint/60 backdrop-blur-xl transition-all duration-300 hover:shadow-mint-sm hover:-translate-y-1 flex flex-col justify-between ${
               index === 0 ? 'lg:col-span-2' : ''
             }`}
           >
             {/* Top decorative badge */}
             <div className="space-y-4">
               <div className="flex items-center justify-between">
-                <div className="w-10 h-10 rounded-2xl bg-dream-800/80 border border-white/5 flex items-center justify-center shadow-inner group-hover:scale-105 transition-transform">
+                <div className="w-10 h-10 rounded-xl bg-kos-navy-deep border border-kos-clay-dark/50 flex items-center justify-center shadow-inner group-hover:scale-105 transition-transform">
                   {getInterestIcon(item.icon)}
                 </div>
-                <div className="px-3 py-1 rounded-full bg-dream-850/80 border border-lavender/15 text-[10px] font-mono text-lavender uppercase tracking-wider">
+                <div className="px-3 py-1 rounded-full bg-kos-navy-deep border border-kos-clay-dark/40 text-[10px] font-mono text-kos-mint uppercase tracking-wider">
                   {item.category}
                 </div>
               </div>
 
               <div>
-                <h3 className="font-heading text-xl font-bold text-white group-hover:text-lavender transition-colors">
+                <h3 className="font-heading text-xl font-bold text-kos-parchment group-hover:text-kos-mint transition-colors">
                   {item.title}
                 </h3>
-                <p className="text-xs sm:text-sm text-lavender-muted leading-relaxed mt-2">
+                <p className="text-xs sm:text-sm text-kos-linen leading-relaxed mt-2">
                   {item.description}
                 </p>
               </div>
             </div>
 
             {/* Bottom Tag */}
-            <div className="pt-4 mt-6 border-t border-white/5 flex items-center justify-between text-xs font-mono text-lavender">
+            <div className="pt-4 mt-6 border-t border-kos-clay-dark/40 flex items-center justify-between text-xs font-mono text-kos-mint">
               <span>✦ {item.tag}</span>
-              <span className="text-lavender-muted/50 text-[10px]">#insideTheMind</span>
+              <span className="text-kos-linen-muted/60 text-[10px]">#KingdomOfScience</span>
             </div>
           </div>
         ))}
@@ -82,4 +82,3 @@ export const BeyondSection: React.FC = () => {
     </section>
   );
 };
-

@@ -70,17 +70,17 @@ export const CustomCursor: React.FC<CustomCursorProps> = ({ reducedMotion = fals
     <>
       {/* Central pinpoint dot */}
       <div
-        className="fixed top-0 left-0 w-2 h-2 rounded-full bg-lavender pointer-events-none z-50 transform -translate-x-1/2 -translate-y-1/2 transition-transform duration-75"
+        className="fixed top-0 left-0 w-2 h-2 rounded-full bg-kos-mint pointer-events-none z-50 transform -translate-x-1/2 -translate-y-1/2 transition-transform duration-75 shadow-mint-sm"
         style={{
           transform: `translate3d(${pos.x}px, ${pos.y}px, 0)`,
         }}
       />
-      {/* Trailing soft purple glow aura */}
+      {/* Trailing electric mint aura */}
       <div
-        className={`fixed top-0 left-0 rounded-full pointer-events-none z-50 border border-lavender-muted/50 transition-all duration-300 ease-out ${
+        className={`fixed top-0 left-0 rounded-full pointer-events-none z-50 border border-kos-mint/40 transition-all duration-300 ease-out ${
           isHovered
-            ? 'w-14 h-14 bg-neon-violet/15 backdrop-blur-[1px] border-lavender scale-110 shadow-glow-sm'
-            : 'w-8 h-8 bg-dream-500/10'
+            ? 'w-14 h-14 bg-kos-mint/15 backdrop-blur-[1px] border-kos-mint scale-110 shadow-mint-md'
+            : 'w-8 h-8 bg-kos-mint/5'
         }`}
         style={{
           transform: `translate3d(${trailingPos.x}px, ${trailingPos.y}px, 0) translate(-50%, -50%)`,
@@ -89,4 +89,3 @@ export const CustomCursor: React.FC<CustomCursorProps> = ({ reducedMotion = fals
     </>
   );
 };
-

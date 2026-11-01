@@ -7,68 +7,70 @@ export default {
   theme: {
     extend: {
       colors: {
-        dream: {
-          950: '#06020c',
-          900: '#0c0517',
-          850: '#120822',
-          800: '#1a0b32',
-          700: '#2b1254',
-          600: '#4c1d95',
-          500: '#7c3aed',
-          400: '#a855f7',
-          300: '#c084fc',
-          200: '#d8b4fe',
-          100: '#ede9fe',
-          50: '#f5f3ff',
-        },
-        lavender: {
-          light: '#f3e8ff',
-          DEFAULT: '#d8b4fe',
-          muted: '#c4b5fd',
-          deep: '#8b5cf6',
-        },
-        neon: {
-          violet: '#bf5af2',
-          purple: '#d946ef',
-          cyan: '#38bdf8',
+        kos: {
+          // Primary Background
+          navy: '#223246',
+          'navy-dark': '#162130',
+          'navy-deep': '#0f1722',
+          'navy-surface': '#1c293a',
+
+          // Senku Mint / Cyan Glow
+          mint: '#97D8C4',
+          'mint-dark': '#529993',
+          'mint-glow': '#bbf0e1',
+
+          // Terracotta / Empire Orange
+          terra: '#E76F51',
+          'terra-dark': '#D35400',
+          'terra-glow': '#f4a261',
+
+          // Parchment / Linen Tan
+          parchment: '#F4E9D8',
+          linen: '#E6D5B8',
+          'linen-muted': '#cfbd9c',
+
+          // Petrified Clay Brown
+          clay: '#9E6B55',
+          'clay-dark': '#704A3A',
+          'clay-light': '#b5836c',
         }
       },
       fontFamily: {
-        heading: ['"Syne"', '"Outfit"', 'sans-serif'],
-        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
-        mono: ['"JetBrains Mono"', 'monospace'],
+        heading: ['"Space Grotesk"', '"Syne"', 'sans-serif'],
+        sans: ['"Plus Jakarta Sans"', '"Inter"', 'sans-serif'],
+        mono: ['"Fira Code"', '"JetBrains Mono"', 'monospace'],
       },
       boxShadow: {
-        'glow-sm': '0 0 15px rgba(168, 85, 247, 0.25)',
-        'glow-md': '0 0 30px rgba(168, 85, 247, 0.35)',
-        'glow-lg': '0 0 50px rgba(192, 132, 252, 0.45)',
-        'glow-neon': '0 0 25px rgba(217, 70, 239, 0.55)',
-        'glass': '0 8px 32px 0 rgba(12, 5, 23, 0.45)',
+        'mint-sm': '0 0 12px rgba(151, 216, 196, 0.25)',
+        'mint-md': '0 0 25px rgba(151, 216, 196, 0.4)',
+        'mint-lg': '0 0 45px rgba(151, 216, 196, 0.55)',
+        'terra-sm': '0 0 15px rgba(231, 111, 81, 0.3)',
+        'terra-md': '0 0 30px rgba(231, 111, 81, 0.45)',
+        'lab-card': '0 8px 32px 0 rgba(15, 23, 34, 0.65)',
+        'hairline': '0 0 0 1px rgba(151, 216, 196, 0.2)',
       },
       animation: {
         'float-slow': 'float 7s ease-in-out infinite',
         'float-medium': 'float 5s ease-in-out infinite',
-        'float-fast': 'float 3.5s ease-in-out infinite',
-        'pulse-glow': 'pulseGlow 4s ease-in-out infinite',
-        'orbit': 'orbit 20s linear infinite',
-        'shimmer': 'shimmer 2.5s linear infinite',
+        'pulse-mint': 'pulseMint 3s ease-in-out infinite',
+        'telemetry-scan': 'telemetryScan 2s linear infinite',
+        'sparkle': 'sparkle 2.5s ease-in-out infinite',
       },
       keyframes: {
         float: {
           '0%, 100%': { transform: 'translateY(0px)' },
-          '50%': { transform: 'translateY(-12px)' },
+          '50%': { transform: 'translateY(-8px)' },
         },
-        pulseGlow: {
-          '0%, 100%': { opacity: '0.4', transform: 'scale(1)' },
-          '50%': { opacity: '0.8', transform: 'scale(1.06)' },
+        pulseMint: {
+          '0%, 100%': { opacity: '0.4', filter: 'drop-shadow(0 0 4px #97D8C4)' },
+          '50%': { opacity: '0.9', filter: 'drop-shadow(0 0 14px #97D8C4)' },
         },
-        shimmer: {
-          '0%': { backgroundPosition: '-200% 0' },
-          '100%': { backgroundPosition: '200% 0' },
+        telemetryScan: {
+          '0%': { transform: 'translateX(-100%)' },
+          '100%': { transform: 'translateX(100%)' },
         }
       }
     },
   },
   plugins: [],
 }
-

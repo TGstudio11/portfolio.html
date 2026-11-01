@@ -1,131 +1,83 @@
-# ✦ Tulika — Personal Interactive Portfolio
+# ✦ Tulika Gupta — Kingdom of Science | AI Lab Portfolio
 
-An immersive, experience-driven personal portfolio website crafted for **Tulika**, a First-Year B.Tech student exploring the intersection of technology, creative code, and design.
+An interactive, dark-mode portfolio for **Tulika Gupta**, a **1st-Year B.Tech Computer Science & AI/ML student at Newton School of Technology (NST)**.
 
-Inspired by the storytelling, atmospheric depth, and motion of [nesilnoble.com](https://nesilnoble.com/), built with a **purple, dreamy, futuristic, creative aesthetic**.
-
----
-
-## ✨ Key Features & Aesthetic Elements
-
-1. **Dreamy Purple Palette & Ambient Atmosphere**
-   - Deep violet, lavender, soft lilac, and glowing neon purple highlights.
-   - Interactive cosmic starfield & nebula canvas with particle cursor attraction.
-   - Glassmorphic translucent surfaces with soft rim lighting.
-
-2. **The Hero Centerpiece**
-   - **Central Character**: High-resolution stylized digital art illustration of Tulika with glasses and flowing hair at the exact center of the screen.
-   - Subtle floating/breathing animation with neon violet backlight halo.
-   - Surrounding floating UI orbital pills: *Curious Mind (01)*, *First-Year B.Tech*, *Creative Tech*, *Bengaluru, India*.
-   - Prominent text: *"Inside the mind of"*, **Tulika**, *"First-Year B.Tech Student"*, *"Curious mind. Creative ideas. Building things that matter."*, and customizable tagline badge.
-   - Animated scroll indicator inviting visitors into her digital universe.
-
-3. **Floating Navigation & Sensory Experience**
-   - Glass floating navigation bar with active scroll section tracking.
-   - **Ambient Audio Engine**: Generative Web Audio API dreamy synth chime/pad (OFF by default, toggled on demand).
-   - **Accessibility**: One-click Reduced-Motion toggle to pause or soften animations.
-   - Custom trailing lilac aura cursor for desktop.
-
-4. **Conversational About Me & Bento Matrix**
-   - Conversational first-person narrative introducing Tulika honestly as a first-year student.
-   - Bento matrix displaying College, Branch, Location, Current Learning Roadmap, and Fun Facts.
-
-5. **Projects Showcase & Case Study Views**
-   - Category filtering (`Creative Tech`, `AI & Machine Learning`, `Web Development`).
-   - Detailed project cards with title, tagline, description, tech stack tags, and dedicated **"My Contribution"** highlight box.
-   - Interactive glassmorphic modal with in-depth case study, technical highlights, and personal learnings.
-   - Dedicated **"Currently building something new"** teaser card for upcoming work.
-
-6. **Authentic Journey & Milestones**
-   - Prominently showcases current undergraduate status: **First-Year B.Tech Student**.
-   - Milestone trajectory with glowing timeline markers covering Coursework, Hackathons, Tech Clubs, and Self-Directed Learning without fabricated corporate titles.
-
-7. **Skills Galaxy**
-   - Categorized badges for Programming, Frontend, AI/ML, Design Tools, Dev Tools, and Soft Skills.
-   - Interactive search bar to quickly locate skills.
-   - Grounded in genuine practice without arbitrary percentage bars.
-
-8. **Beyond the Screen**
-   - *"A little more about me."*
-   - Playful editorial cards covering night owl coding playlists, purple aesthetic obsessions, sci-fi reading, and creative inspirations.
-
-9. **Contact & Transmit Channel**
-   - *"Have an idea? Let's make something interesting."*
-   - Interactive contact form with input validation, dispatch animation, and confetti celebration.
-   - Quick one-click email copy button and links to GitHub, LinkedIn, and Instagram.
-   - Minimalist footer: *"Designed with curiosity by Tulika."* + Back-to-Top interaction.
+Inspired by a subtle, fan-focused **Dr. STONE** theme designed as a high-tech modern software research lab, incorporating atmospheric rolling mountain horizon silhouettes, the Chibi Trio easter eggs, and a strict muted dark palette.
 
 ---
 
-## 🛠️ Quick Start & Development
+## 🎨 Color Palette & Aesthetic
+
+- **Primary Background:** Deep Slate Navy (`#223246`) with subtle petrification crack textures (`#162130`).
+- **Senku Mint / Cyan Glow:** `#97D8C4` & `#529993` (Active tabs, status indicators, and glow accents).
+- **Terracotta / Empire Orange:** `#E76F51` & `#D35400` (Action buttons and telemetry callouts).
+- **Parchment / Linen Tan:** `#F4E9D8` & `#E6D5B8` (Primary text, headers, and sharp container borders).
+- **Petrified Clay Brown:** `#9E6B55` & `#704A3A` (Secondary text, outline badges, and card borders).
+
+---
+
+## 🧪 Key Features & Lore Easter Eggs
+
+1. **Atmospheric Landscape Horizon**
+   - Embedded SVG rolling mountain silhouettes and low-opacity cloud vectors at the bottom and footer, capturing the serene open-world horizon of post-apocalyptic Earth.
+
+2. **Interactive Neural Network Constellation Canvas**
+   - Floating petrification dust and star particles in an HTML5 canvas.
+   - When the user moves their cursor, nearby particles connect into an interactive **Neural Network Constellation** with electric mint sparks.
+   - Faint background watermarks rendering $E = mc^2$, the Miracle Fluid synthesis reaction ($\text{HNO}_3 + \text{C}_2\text{H}_5\text{OH} \longrightarrow \text{De-petrification Fluid}$), and deep learning backprop equations.
+
+3. **Micro Chibi Trio Badges**
+   - 🧪 **Scientist (Senku)** $\rightarrow$ Attached to `001: Raw Materials` (Skills & Math Foundations).
+   - 🧭 **Navigator (Ryusui)** $\rightarrow$ Attached to `002: Inventions & Crafting` (AI/ML Projects).
+   - 🃏 **Mentalist (Gen)** $\rightarrow$ Attached to `003: Telecommunication Logs` (Experience, Hackathons & Terminal).
+
+4. **"Trio Council" Hidden Advisory Popup**
+   - Triggered via the `[ ✦ TRIO COUNCIL DIRECTIVE ]` button in the footer.
+   - Displays advisory cards for Senku, Ryusui, and Gen with tech-adapted quotes.
+
+5. **Hardware Telemetry Counter**
+   - Top bar telemetry ticking rapidly from `0` to `10,000,000,000%`!
+
+6. **Interactive CLI Terminal Logbook**
+   - Live terminal supporting commands:
+     - `help`: list available laboratory commands
+     - `status`: display Tulika's student profile & NST telemetry
+     - `craft`: inspect active AI invention blueprints
+     - `train`: live-stream simulated neural network training epochs & convergence
+     - `depetrify`: synthesize Miracle Fluid with revival animation
+     - `senku`, `ryusui`, `gen`: direct radio broadcasts
+     - `clear`: clear the console
+
+7. **Featured AI Inventions (`002: Inventions & Crafting`)**
+   - **Manganese Battery Cell Predictor**: ML energy efficiency & state-of-charge prediction model.
+   - **Neural Glyph Decipherer**: Computer vision OCR model for eroded stone carvings.
+   - **Kinematics & Trajectory Solver**: C++20 / Physics-informed AI model.
+   - **YojanaMitra / SchemeAI**: Multilingual civic-tech web portal.
+
+---
+
+## 🛠️ Quick Start
 
 ```bash
 # Install dependencies
 npm install
 
-# Run Vite development server
+# Start local development server
 npm run dev
 
 # Build for production
 npm run build
 
-# Preview production build locally
+# Preview production build
 npm run preview
 ```
 
-Server runs by default at `http://localhost:3000/`.
-
 ---
 
-## 📝 How to Personalize & Edit Content
+## 🏛️ Student Profile
 
-All portfolio content is centralized in a single, well-documented file:
-
-👉 **[`src/data/portfolioData.ts`](./src/data/portfolioData.ts)**
-
-### 1. Update College, Branch & Personal Bio
-Open `src/data/portfolioData.ts` and edit the `personal` object:
-```ts
-college: "Your College / University Name",
-branch: "B.Tech in Computer Science & Engineering",
-startYear: "2024",
-location: "Your City, Country",
-tagline: "Curious mind. Creative ideas. Building things that matter.",
-customTagline: "Designing immersive digital experiences with code & imagination",
-```
-
-### 2. Replace the Central Avatar
-The avatar image is located at:
-👉 **[`public/avatar.jpg`](./public/avatar.jpg)**
-
-To replace it with your own photograph or a new digital illustration:
-- Save your image as `avatar.jpg` in the `public/` folder.
-- Or update `avatarUrl` in `src/data/portfolioData.ts` to point to any image file or URL.
-
-### 3. Add or Modify Projects
-In `src/data/portfolioData.ts`, add items to the `projects` array with your project name, category, description, your personal contribution, and links.
-
-### 4. Update Social Links & Contact
-Update `socialLinks` in `src/data/portfolioData.ts`:
-```ts
-socialLinks: {
-  email: "your.email@example.com",
-  linkedin: "https://linkedin.com/in/yourhandle",
-  github: "https://github.com/yourhandle",
-  instagram: "https://instagram.com/yourhandle",
-}
-```
-
----
-
-## 💜 Tech Stack
-
-- **React 19**
-- **TypeScript**
-- **Tailwind CSS** with custom purple/lavender color system & glow utilities
-- **HTML5 Canvas** (starfield & cosmic nebula particles)
-- **Web Audio API** (ethereal ambient sound synthesis)
-- **Lucide Icons**
-- **Canvas Confetti**
-- **Vite 6**
-
+- **Name:** Tulika Gupta
+- **Academics:** 1st-Year B.Tech Computer Science & AI/ML
+- **Institution:** Newton School of Technology (NST)
+- **Email:** tulikagupta250308@gmail.com
+- **GitHub:** [https://github.com/tulikagupta250308-sudo](https://github.com/tulikagupta250308-sudo)

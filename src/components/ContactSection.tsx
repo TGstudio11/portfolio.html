@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Send, CheckCircle2, Copy, Sparkles, MessageSquare } from 'lucide-react';
+import { Mail, Send, CheckCircle2, Copy, Radio, Sparkles } from 'lucide-react';
 import { GithubIcon, LinkedinIcon, InstagramIcon } from './SocialIcons';
 import { portfolioData } from '../data/portfolioData';
 import confetti from 'canvas-confetti';
@@ -33,11 +33,8 @@ export const ContactSection: React.FC = () => {
 
     setIsSubmitting(true);
 
-    // Simulate real network submission with Formspree fallback / mailto draft
     try {
-      // If a real Formspree endpoint is configured, this posts to it
-      // Otherwise graceful fallback with feedback
-      await new Promise(resolve => setTimeout(resolve, 900));
+      await new Promise(resolve => setTimeout(resolve, 800));
 
       setSubmitted(true);
       try {
@@ -45,15 +42,14 @@ export const ContactSection: React.FC = () => {
           particleCount: 50,
           spread: 70,
           origin: { y: 0.8 },
-          colors: ['#a855f7', '#c084fc', '#d8b4fe', '#f3e8ff']
+          colors: ['#97D8C4', '#529993', '#E76F51', '#F4E9D8'],
         });
       } catch {}
 
-      // Optional: prepare mailto in background so Tulika gets the message directly
       const mailtoUrl = `mailto:${encodeURIComponent(socialLinks.email)}?subject=${encodeURIComponent(
-        `Portfolio Inquiry from ${formData.name}`
+        `Signal Dispatch from ${formData.name} (KOS AI Lab)`
       )}&body=${encodeURIComponent(
-        `Hi Tulika,\n\n${formData.message}\n\nFrom: ${formData.name} (${formData.email})`
+        `Operator Tulika,\n\n${formData.message}\n\nSignal Origin: ${formData.name} (${formData.email})`
       )}`;
 
       window.open(mailtoUrl, '_blank');
@@ -64,51 +60,51 @@ export const ContactSection: React.FC = () => {
 
   return (
     <section id="contact" className="relative py-24 sm:py-32 px-4 sm:px-6 max-w-6xl mx-auto">
-      {/* Intense Glowing Purple Background Halo */}
-      <div className="absolute inset-0 max-w-4xl mx-auto h-full bg-gradient-to-t from-dream-600/20 via-neon-violet/10 to-transparent blur-[140px] pointer-events-none -z-10" />
+      {/* Background glow node */}
+      <div className="absolute inset-0 max-w-4xl mx-auto h-full bg-gradient-to-t from-kos-mint/5 via-kos-terra/5 to-transparent blur-[140px] pointer-events-none -z-10" />
 
       {/* Eyebrow Header */}
       <div className="space-y-3 mb-14 text-center max-w-2xl mx-auto">
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-dream-900/80 border border-lavender/20 text-xs font-mono text-lavender tracking-wider uppercase">
-          <MessageSquare className="w-3.5 h-3.5 text-neon-violet" />
-          <span>Chapter 06 // Connect</span>
+        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-kos-navy-dark border border-kos-mint/30 text-xs font-mono text-kos-mint tracking-wider uppercase">
+          <Radio className="w-3.5 h-3.5 text-kos-mint" />
+          <span>004: Establish Comms // Radio Tower</span>
         </div>
-        <h2 className="font-heading text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white">
-          Have an idea? <br className="hidden sm:inline" />
-          <span className="bg-gradient-to-r from-lavender via-dream-300 to-neon-purple bg-clip-text text-transparent">
-            Let's make something interesting.
+        <h2 className="font-heading text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-kos-parchment">
+          Transmit a Signal. <br className="hidden sm:inline" />
+          <span className="text-kos-terra terra-glow-text">
+            Let's Engineer the Future.
           </span>
         </h2>
-        <p className="text-lavender-muted text-sm sm:text-base leading-relaxed">
-          I'm always open to learning, collaborating, exploring new ideas, and connecting with people who love building things.
+        <p className="text-kos-linen-muted text-sm sm:text-base leading-relaxed font-mono">
+          Whether you want to discuss AI research, collaborate on a hackathon, or talk all things science and compute—my transmission frequency is locked on.
         </p>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-        {/* Left Column: Direct Connect & Social Links */}
-        <div className="lg:col-span-5 space-y-6">
-          <div className="p-6 sm:p-7 rounded-3xl bg-dream-900/60 border border-lavender/20 backdrop-blur-xl shadow-glass space-y-6">
+        {/* Left Column: Direct Channels */}
+        <div className="lg:col-span-5 space-y-6 font-mono">
+          <div className="p-6 sm:p-7 rounded-2xl bg-kos-navy-dark/85 border border-kos-clay-dark/70 backdrop-blur-xl shadow-lab-card space-y-6">
             <div>
-              <span className="font-mono text-xs text-lavender uppercase tracking-wider">
-                Direct Channels
+              <span className="text-xs text-kos-mint uppercase tracking-wider font-semibold">
+                RADIO FREQUENCY: 10.00 GHz
               </span>
-              <h3 className="font-heading text-xl font-bold text-white mt-1">
-                Let's talk code & creativity
+              <h3 className="font-heading text-xl font-bold text-kos-parchment mt-1">
+                Direct Communications Log
               </h3>
-              <p className="text-xs sm:text-sm text-lavender-muted mt-1 leading-relaxed">
-                Whether you have a student project in mind, want to discuss web design, or simply say hi — my inbox is always open.
+              <p className="text-xs sm:text-sm text-kos-linen mt-1 leading-relaxed">
+                Connect via email or discover research repositories on GitHub. Responses dispatched with high priority.
               </p>
             </div>
 
-            {/* Email Copy Card */}
-            <div className="p-4 rounded-2xl bg-dream-950/70 border border-white/5 flex items-center justify-between gap-3">
+            {/* Email Copy Box */}
+            <div className="p-4 rounded-xl bg-kos-navy-deep border border-kos-clay-dark/60 flex items-center justify-between gap-3">
               <div className="flex items-center gap-3 overflow-hidden">
-                <div className="w-9 h-9 rounded-xl bg-dream-800/80 flex items-center justify-center text-neon-violet flex-shrink-0">
+                <div className="w-9 h-9 rounded-lg bg-kos-navy-surface flex items-center justify-center text-kos-mint flex-shrink-0">
                   <Mail className="w-4 h-4" />
                 </div>
                 <div className="overflow-hidden">
-                  <div className="text-[10px] font-mono text-lavender-muted uppercase">Email</div>
-                  <div className="text-xs sm:text-sm font-medium text-white truncate font-mono">
+                  <div className="text-[10px] text-kos-linen-muted uppercase">Dispatch Email</div>
+                  <div className="text-xs sm:text-sm font-semibold text-kos-parchment truncate">
                     {socialLinks.email}
                   </div>
                 </div>
@@ -117,11 +113,11 @@ export const ContactSection: React.FC = () => {
               <button
                 type="button"
                 onClick={handleCopyEmail}
-                className="px-3 py-1.5 rounded-xl bg-dream-800 hover:bg-dream-700 text-xs font-mono text-lavender hover:text-white flex items-center gap-1.5 transition-colors flex-shrink-0"
+                className="px-3 py-1.5 rounded-lg bg-kos-navy-surface hover:bg-kos-navy text-xs text-kos-mint hover:text-white flex items-center gap-1.5 transition-colors flex-shrink-0 border border-kos-mint/30"
               >
                 {copiedEmail ? (
                   <>
-                    <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" />
+                    <CheckCircle2 className="w-3.5 h-3.5 text-kos-mint" />
                     <span>Copied!</span>
                   </>
                 ) : (
@@ -135,64 +131,64 @@ export const ContactSection: React.FC = () => {
 
             {/* Social Network Links */}
             <div className="space-y-2">
-              <span className="text-[11px] font-mono text-lavender-muted uppercase tracking-wider">
-                Find Me Around The Web
+              <span className="text-[11px] text-kos-linen-muted uppercase tracking-wider">
+                External Laboratory Feeds
               </span>
               <div className="grid grid-cols-3 gap-2.5">
                 <a
                   href={socialLinks.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-3 rounded-2xl bg-dream-850/70 hover:bg-dream-700/70 border border-white/5 hover:border-lavender/30 text-lavender-light hover:text-white transition-all flex flex-col items-center gap-1.5 text-center group"
+                  className="p-3 rounded-xl bg-kos-navy-deep hover:bg-kos-navy border border-kos-clay-dark/50 hover:border-kos-mint/50 text-kos-linen hover:text-white transition-all flex flex-col items-center gap-1.5 text-center group"
                 >
-                  <GithubIcon className="w-5 h-5 group-hover:scale-110 transition-transform text-lavender" />
-                  <span className="text-[11px] font-mono">GitHub</span>
+                  <GithubIcon className="w-5 h-5 group-hover:scale-110 transition-transform text-kos-mint" />
+                  <span className="text-[11px]">GitHub</span>
                 </a>
 
                 <a
                   href={socialLinks.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-3 rounded-2xl bg-dream-850/70 hover:bg-dream-700/70 border border-white/5 hover:border-lavender/30 text-lavender-light hover:text-white transition-all flex flex-col items-center gap-1.5 text-center group"
+                  className="p-3 rounded-xl bg-kos-navy-deep hover:bg-kos-navy border border-kos-clay-dark/50 hover:border-kos-mint/50 text-kos-linen hover:text-white transition-all flex flex-col items-center gap-1.5 text-center group"
                 >
-                  <LinkedinIcon className="w-5 h-5 group-hover:scale-110 transition-transform text-cyan-400" />
-                  <span className="text-[11px] font-mono">LinkedIn</span>
+                  <LinkedinIcon className="w-5 h-5 group-hover:scale-110 transition-transform text-kos-terra" />
+                  <span className="text-[11px]">LinkedIn</span>
                 </a>
 
                 <a
                   href={socialLinks.instagram}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-3 rounded-2xl bg-dream-850/70 hover:bg-dream-700/70 border border-white/5 hover:border-lavender/30 text-lavender-light hover:text-white transition-all flex flex-col items-center gap-1.5 text-center group"
+                  className="p-3 rounded-xl bg-kos-navy-deep hover:bg-kos-navy border border-kos-clay-dark/50 hover:border-kos-mint/50 text-kos-linen hover:text-white transition-all flex flex-col items-center gap-1.5 text-center group"
                 >
-                  <InstagramIcon className="w-5 h-5 group-hover:scale-110 transition-transform text-pink-400" />
-                  <span className="text-[11px] font-mono">Instagram</span>
+                  <InstagramIcon className="w-5 h-5 group-hover:scale-110 transition-transform text-kos-linen" />
+                  <span className="text-[11px]">Instagram</span>
                 </a>
               </div>
             </div>
 
             {/* Student Note */}
-            <div className="p-3.5 rounded-2xl bg-dream-950/40 border border-lavender/10 text-[11px] font-mono text-lavender-muted leading-relaxed">
-              📍 Current Location: <span className="text-white font-medium">{personal.location}</span>
+            <div className="p-3.5 rounded-xl bg-kos-navy-deep border border-kos-clay-dark/40 text-[11px] text-kos-linen-muted leading-relaxed">
+              📍 Affiliation: <span className="text-kos-mint font-semibold">{personal.college}</span>
               <br />
-              ✦ Open to hackathon teams & student developer clubs
+              ✦ Status: Open for hackathon teams & research sprints
             </div>
           </div>
         </div>
 
-        {/* Right Column: Functional Interactive Contact Form */}
+        {/* Right Column: High-Frequency Transmission Form */}
         <div className="lg:col-span-7">
-          <div className="p-6 sm:p-8 rounded-3xl bg-dream-900/60 border border-lavender/25 backdrop-blur-xl shadow-glass relative overflow-hidden">
+          <div className="p-6 sm:p-8 rounded-2xl bg-kos-navy-dark/85 border border-kos-clay-dark/70 backdrop-blur-xl shadow-lab-card relative overflow-hidden font-mono">
             {submitted ? (
               <div className="py-12 text-center space-y-4">
-                <div className="w-16 h-16 mx-auto rounded-2xl bg-dream-800/80 border border-neon-violet/40 flex items-center justify-center text-neon-violet shadow-glow-sm">
+                <div className="w-16 h-16 mx-auto rounded-2xl bg-kos-navy-deep border border-kos-mint/50 flex items-center justify-center text-kos-mint shadow-mint-md">
                   <Sparkles className="w-8 h-8 animate-pulse" />
                 </div>
-                <h3 className="font-heading text-2xl font-bold text-white">
-                  Message Sent Successfully!
+                <h3 className="font-heading text-2xl font-bold text-kos-parchment">
+                  Signal Transmitted 10 Billion Percent!
                 </h3>
-                <p className="text-xs sm:text-sm text-lavender-muted max-w-sm mx-auto leading-relaxed">
-                  Thank you for reaching out, {formData.name}. Your message has been prepared and I'll get back to you soon.
+                <p className="text-xs sm:text-sm text-kos-linen-muted max-w-sm mx-auto leading-relaxed">
+                  Thank you, {formData.name}. Your signal has been registered by the Kingdom of Science AI lab console.
                 </p>
                 <button
                   type="button"
@@ -200,16 +196,16 @@ export const ContactSection: React.FC = () => {
                     setSubmitted(false);
                     setFormData({ name: '', email: '', message: '' });
                   }}
-                  className="px-5 py-2 rounded-xl bg-dream-800 hover:bg-dream-700 text-xs font-mono text-lavender hover:text-white transition-colors"
+                  className="px-5 py-2 rounded-lg bg-kos-navy-deep hover:bg-kos-navy text-xs text-kos-mint border border-kos-mint/30 transition-colors"
                 >
-                  Send another message
+                  Transmit another signal
                 </button>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
-                  <label htmlFor="name" className="block text-xs font-mono text-lavender uppercase tracking-wider mb-1.5">
-                    Your Name *
+                  <label htmlFor="name" className="block text-xs text-kos-mint uppercase tracking-wider mb-1.5 font-semibold">
+                    Sender Identification (Name) *
                   </label>
                   <input
                     id="name"
@@ -218,14 +214,14 @@ export const ContactSection: React.FC = () => {
                     required
                     value={formData.name}
                     onChange={handleChange}
-                    placeholder="e.g. Alex Rivera"
-                    className="w-full px-4 py-3 rounded-2xl bg-dream-950/70 border border-lavender/20 text-sm text-white placeholder-lavender-muted/40 focus:outline-none focus:border-neon-violet focus:ring-1 focus:ring-neon-violet transition-all"
+                    placeholder="e.g. Chrome / Senku / Collaborator"
+                    className="w-full px-4 py-3 rounded-xl bg-kos-navy-deep border border-kos-clay-dark/70 text-sm text-kos-parchment placeholder-kos-linen-muted/30 focus:outline-none focus:border-kos-mint transition-all font-mono"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="email" className="block text-xs font-mono text-lavender uppercase tracking-wider mb-1.5">
-                    Your Email *
+                  <label htmlFor="email" className="block text-xs text-kos-mint uppercase tracking-wider mb-1.5 font-semibold">
+                    Return Frequency (Email) *
                   </label>
                   <input
                     id="email"
@@ -234,14 +230,14 @@ export const ContactSection: React.FC = () => {
                     required
                     value={formData.email}
                     onChange={handleChange}
-                    placeholder="alex@example.com"
-                    className="w-full px-4 py-3 rounded-2xl bg-dream-950/70 border border-lavender/20 text-sm text-white placeholder-lavender-muted/40 focus:outline-none focus:border-neon-violet focus:ring-1 focus:ring-neon-violet transition-all"
+                    placeholder="your.email@example.com"
+                    className="w-full px-4 py-3 rounded-xl bg-kos-navy-deep border border-kos-clay-dark/70 text-sm text-kos-parchment placeholder-kos-linen-muted/30 focus:outline-none focus:border-kos-mint transition-all font-mono"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-xs font-mono text-lavender uppercase tracking-wider mb-1.5">
-                    Your Message *
+                  <label htmlFor="message" className="block text-xs text-kos-mint uppercase tracking-wider mb-1.5 font-semibold">
+                    Transmission Content (Message) *
                   </label>
                   <textarea
                     id="message"
@@ -250,21 +246,22 @@ export const ContactSection: React.FC = () => {
                     required
                     value={formData.message}
                     onChange={handleChange}
-                    placeholder="Tell me about your project, idea, or just drop a friendly hello..."
-                    className="w-full px-4 py-3 rounded-2xl bg-dream-950/70 border border-lavender/20 text-sm text-white placeholder-lavender-muted/40 focus:outline-none focus:border-neon-violet focus:ring-1 focus:ring-neon-violet transition-all resize-none"
+                    placeholder="Transmit your idea, research question, project proposal, or say hi..."
+                    className="w-full px-4 py-3 rounded-xl bg-kos-navy-deep border border-kos-clay-dark/70 text-sm text-kos-parchment placeholder-kos-linen-muted/30 focus:outline-none focus:border-kos-mint transition-all font-mono resize-none"
                   />
                 </div>
 
+                {/* High-frequency "Send Signal" Action Button in Terracotta Empire Orange */}
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full py-3.5 px-6 rounded-2xl bg-gradient-to-r from-dream-600 via-dream-500 to-neon-violet hover:from-dream-500 hover:to-neon-violet text-white text-sm font-semibold tracking-wide shadow-glow-sm hover:shadow-glow-md transition-all flex items-center justify-center gap-2 group disabled:opacity-50"
+                  className="w-full py-3.5 px-6 rounded-xl bg-kos-terra hover:bg-kos-terra-dark text-white text-sm font-bold tracking-wider shadow-terra-sm hover:shadow-terra-md transition-all flex items-center justify-center gap-2 group disabled:opacity-50 font-mono uppercase"
                 >
                   {isSubmitting ? (
-                    <span className="font-mono text-xs">Sending dispatch...</span>
+                    <span>Broadcasting Signal...</span>
                   ) : (
                     <>
-                      <span>Transmit Message</span>
+                      <span>[ SEND SIGNAL ]</span>
                       <Send className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-0.5 transition-transform" />
                     </>
                   )}

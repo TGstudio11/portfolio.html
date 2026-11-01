@@ -1,12 +1,12 @@
 import { useState, useEffect } from 'react';
-import { CanvasStars } from './components/CanvasStars';
+import { NeuralNetworkCanvas } from './components/NeuralNetworkCanvas';
 import { CustomCursor } from './components/CustomCursor';
 import { Navbar } from './components/Navbar';
 import { HeroSection } from './components/HeroSection';
 import { AboutSection } from './components/AboutSection';
+import { SkillsSection } from './components/SkillsSection';
 import { ProjectsSection } from './components/ProjectsSection';
 import { ExperienceSection } from './components/ExperienceSection';
-import { SkillsSection } from './components/SkillsSection';
 import { BeyondSection } from './components/BeyondSection';
 import { ContactSection } from './components/ContactSection';
 import { Footer } from './components/Footer';
@@ -34,48 +34,47 @@ export function App() {
   };
 
   return (
-    <div className="relative min-h-screen bg-dream-950 text-lavender-light overflow-hidden">
-      {/* Interactive Dreamy Starfield & Nebula Particle Canvas */}
-      <CanvasStars reducedMotion={reducedMotion} />
+    <div className="relative min-h-screen bg-kos-navy text-kos-parchment petrification-bg overflow-hidden font-sans selection:bg-kos-mint selection:text-kos-navy-dark">
+      {/* Interactive Neural Network Constellation & Petrification Dust Canvas */}
+      <NeuralNetworkCanvas reducedMotion={reducedMotion} />
 
-      {/* Trailing Custom Cursor on Desktop */}
+      {/* Trailing Electric Mint Cursor on Desktop */}
       <CustomCursor reducedMotion={reducedMotion} />
 
-      {/* Floating Glass Navigation */}
+      {/* Floating Laboratory Navigation & Telemetry Bar */}
       <Navbar
         reducedMotion={reducedMotion}
         onToggleReducedMotion={toggleReducedMotion}
       />
 
-      {/* Main Experience Stream */}
+      {/* Main Scientific Stream */}
       <main className="relative z-10 flex flex-col">
-        {/* 01: Hero Centerpiece */}
+        {/* 000: Base Camp // Hero Centerpiece */}
         <HeroSection reducedMotion={reducedMotion} />
 
-        {/* 02: Conversational Storytelling & About */}
+        {/* 000: Base Camp // Conversational Storytelling & Philosophy */}
         <AboutSection />
 
-        {/* 03: Interactive Projects Showcase */}
-        <ProjectsSection />
-
-        {/* 04: Experience & Learning Journey Timeline */}
-        <ExperienceSection />
-
-        {/* 05: Skills & Technologies Matrix */}
+        {/* 001: Raw Materials // Skills & Math Foundations (Chibi Senku) */}
         <SkillsSection />
 
-        {/* 06: Beyond The Screen Personal World */}
+        {/* 002: Inventions & Crafting // AI Schematics (Chibi Ryusui) */}
+        <ProjectsSection />
+
+        {/* 003: Telecommunication Logs & Interactive Terminal (Chibi Gen) */}
+        <ExperienceSection />
+
+        {/* 005: Human Side of Science // Beyond the Screen */}
         <BeyondSection />
 
-        {/* 07: Contact & Interactive Transmit Form */}
+        {/* 004: Establish Comms // Radio Tower & Transmission */}
         <ContactSection />
       </main>
 
-      {/* Footer & Back to top */}
+      {/* Atmospheric Horizon & Trio Council Footer */}
       <Footer reducedMotion={reducedMotion} />
     </div>
   );
 }
 
 export default App;
-
